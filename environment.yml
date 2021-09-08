@@ -1,0 +1,11 @@
+name: microbiome-mbt-rostock-2021-01
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - r-base=3.6
+  - r-ggplot2
+  - r-biocmanager
+  - bioconductor-phyloseq
+  - pandaseq
+  - fastqc
