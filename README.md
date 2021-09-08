@@ -20,17 +20,10 @@ These sessions will cover the use of a variety of software tools needed for the 
 - Sessions 2-3, Data analysis: [IBIMA](https://ibima.med.uni-rostock.de) Computerraum ([Ernst-Heydemann-Str. 8](https://goo.gl/maps/JGDWhPDLHxG2), 3. Etage, Nr. 3016) <br>
 13.10 and 20.10.2021, 10:00 - 11:30 hrs.
 
----
+<!--
 
 ## Materials and online methods
 
-
-##### Data
-
-- Illumina data: [cloud drive](https://drive.google.com/drive/folders/16M2Gn7gn_3vORVX6uAy4k9LdNNsL7KO_); see `fastq` folder
-
-
-<!--
 - Alternatively, the course can be also followed using the [MiSeq SOP](http://www.mothur.org/w/images/d/d6/MiSeqSOPData.zip) FASTQ files (Kosich et al., 2013).
 
 ##### Online tools
@@ -41,7 +34,13 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ---
 
-## Session 1: Setup
+## Session 1
+
+##### Data
+
+- Illumina data: [cloud drive](https://drive.google.com/drive/folders/16M2Gn7gn_3vORVX6uAy4k9LdNNsL7KO_); see `fastq` folder
+
+##### Software
 
 Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio)
 
@@ -74,7 +73,8 @@ $ pandaseq -f paired1.fastq -r paired2.fastq -w output.fa -g log.txt
 # observe the first ten lines of the FASTQ output
 $ head output.fa
 
-# count the total number of HEADER lines with the command below -how many FRAGMENTS are in this FASTA?
+# count the total number of HEADER lines with the command below 
+#  -how many FRAGMENTS are in this FASTA?
 $ grep -c ">" output.fa
 
 # copy first 10 lines from the FASTA and paste it into the RDP server
