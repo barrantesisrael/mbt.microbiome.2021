@@ -53,7 +53,7 @@ Alternatively: https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/ma
 
 ## Session 2 
 
-##### 2.1 Quality control with the FASTQC tool
+##### 2.1 Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
 
 ```bash
@@ -89,7 +89,7 @@ $ grep -c ">" output.fa
 - Find the `FASTQC` program on the tool frame, and run this program with your data.
 
 
-##### 2.2 Amplicon assembly with pandaseq (example)
+##### 2.2 Amplicon assembly with [pandaseq](https://github.com/neufeld/pandaseq) (example)
 
 Open the `Terminal` in the Binder session
 
