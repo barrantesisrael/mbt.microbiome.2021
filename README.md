@@ -76,9 +76,6 @@ $ head output.fa
 # count the total number of HEADER lines with the command below 
 #  -how many FRAGMENTS are in this FASTA?
 $ grep -c ">" output.fa
-
-# copy first 10 lines from the FASTA and paste it into the RDP server
-# create a new script and copy and paste the code below
 ```
 
 
