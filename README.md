@@ -1,4 +1,4 @@
-# UMR Microbiome Praktikum WS2021/22
+# UMR MBT Microbiome Praktikum WS2021/22
 
 Scripts and tutorials for analyzing microbiome data. Lab practice for the lecture: [Moderne molekulare und Hochdurchsatz-Technologien in der medizinischen Grundlagenforschung](https://lsf.uni-rostock.de/qisserver/rds;jsessionid=BB8A59F014D3F7C41005016CB244C476.node2?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&navigationPosition=lectures%2Csearch&breadcrumb=searchLectures&topitem=lectures&subitem=search&veranstaltung.veranstid=115284)
 
