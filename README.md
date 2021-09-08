@@ -43,7 +43,7 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ## Session 1: Setup
 
-Launch the MBT Binder here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio)
+Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio)
 
 <!--
 Alternatively: https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio
@@ -53,11 +53,7 @@ Alternatively: https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/ma
 
 ## Session 2 
 
-##### 2.1 Quality control with the FASTQC tool (Galaxy server)
-
-- Head to the [Galaxy](https://usegalaxy.eu) project mirror
-- Upload your sequencing FASTQ data
-- Find the `FASTQC` program on the tool frame, and run this program with your data.
+##### 2.1 Quality control with the FASTQC tool
 
 
 ```bash
