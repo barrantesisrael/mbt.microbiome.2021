@@ -92,16 +92,17 @@ $ fastqc --quiet Platz1_R1.head.fastq
 Continue on the `Terminal` from the Binder session
 
 ```bash
+# pandaseq options
+$ pandaseq -h
+
 # amplicon assembly with pandaseq
 $ pandaseq -f Platz1_R1.head.fastq -r Platz1_R2.head.fastq -w Platz1.fa -g log.txt
 
-# observe the first ten lines of the FASTQ output
+# observe the first ten lines of the FASTA output
 $ head Platz1.fa
 
 # count the total number of HEADER lines with the command below -how many FRAGMENTS are in this FASTA?
 $ grep -c ">" Platz1.fa
-
-# copy first 10 lines from the FASTA and paste it into the RDP server
 ```
 
 ##### 2.3 OTU Assignment: Align sequence data to rRNA databases
