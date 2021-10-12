@@ -40,7 +40,7 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ##### Software
 
-- Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio)
+- Our interactive course uses the virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio) system
 
 <!--
 Alternatively: https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio
@@ -50,30 +50,33 @@ Alternatively: https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/ma
 
 ## Session 2 
 
-##### 2.1 Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
+Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio)
+
+##### 2.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
 
 ```bash
+# try basic Linux/OSX commands, such as
+$ ls
+$ cd data
+
 # observe the first ten lines -what do you notice?
-$ head paired1.fastq
+$ head Platz1_R1.head.fastq
 
 # count the total number of lines with the command below -how many READS are in this FASTQ?
-$ wc -l paired1.fastq
+$ wc -l Platz1_R1.head.fastq
+
+# find specific words, e.g "AATATT"
+$ grep "AATATT" Platz1_R1.head.fastq
+
+# combine commands. e.g.
+$ grep "AATATT" Platz1_R1.head.fastq | wc -l
 
 # quality check with fastqc
-$ fastqc --quiet paired1.fastq
+$ fastqc --quiet Platz1_R1.head.fastq
 # click to HTML output and select "View in Web Browser"
 # a new tab opens with the fastqc results
-
-# amplicon assembly with pandaseq
-$ pandaseq -f paired1.fastq -r paired2.fastq -w output.fa -g log.txt
-
-# observe the first ten lines of the FASTQ output
-$ head output.fa
-
-# count the total number of HEADER lines with the command below 
-#  -how many FRAGMENTS are in this FASTA?
-$ grep -c ">" output.fa
+# repeat the analyses with the second sequencing pair, e.g. Platz1_R2.head.fastq
 ```
 
 
@@ -86,32 +89,24 @@ $ grep -c ">" output.fa
 
 ##### 2.2 Amplicon assembly with [pandaseq](https://github.com/neufeld/pandaseq) (example)
 
-Open the `Terminal` in the Binder session
+Continue on the `Terminal` from the Binder session
 
 ```bash
 # amplicon assembly with pandaseq
-$ pandaseq -f paired1.fastq -r paired2.fastq -w output.fa -g log.txt
+$ pandaseq -f Platz1_R1.head.fastq -r Platz1_R2.head.fastq -w Platz1.fa -g log.txt
 
 # observe the first ten lines of the FASTQ output
-$ head output.fa
+$ head Platz1.fa
 
 # count the total number of HEADER lines with the command below -how many FRAGMENTS are in this FASTA?
-$ grep -c ">" output.fa
+$ grep -c ">" Platz1.fa
 
 # copy first 10 lines from the FASTA and paste it into the RDP server
-# create a new script and copy and paste the code below
 ```
-
-Alternatively the `Terminal` can be locally found as following: 
-
-- Windows: Go to `Start`, search for "cmd" to open the `Command Prompt`
-- Ubuntu Linux: `Applications` / `Accessories` 
-- Mac OSX: `Applications` / `Utilities`
-
 
 ##### 2.3 OTU Assignment: Align sequence data to rRNA databases
 
-- Download your FASTA header output file e.g. `Platz22.fasta.txt` to your `bioinfo` folder; or copy first 10 lines from the above obtained FASTA (`output.fa`)
+- Copy first 10 lines from the above obtained FASTA (e.g. `Platz1.fa`)
 - Access the [RDP Classifier webserver](http://rdp.cme.msu.edu/classifier/classifier.jsp) 
 - Upload the FASTA header by clicking on `Browse`, next to "_Choose a file (unaligned format) to upload:_"; select the file and hit `Open`
 - Click on `Submit`. When the run is already complete, examine the results. These can be also downloaded by clicking on `download entire hierarchy as text file`.
