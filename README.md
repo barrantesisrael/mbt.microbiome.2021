@@ -174,6 +174,9 @@ plot_ordination(psTemp, iMDS, color="Geschlecht") +
   geom_text(aes(label=X.SampleID), hjust=0, vjust=0)
   
 # repeat the ordination plot, using diet and smoking habits information
+plot_ordination(psTemp, iMDS, color="Raucher") + 
+  geom_text(aes(label=X.SampleID), vjust = -1) +
+  stat_ellipse() # using default ellipse
 ```
 
 ##### 3.3 Microbial communities
