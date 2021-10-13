@@ -174,6 +174,12 @@ plot_ordination(psTemp, iMDS, color="Geschlecht") +
 ```r
 # Plot abundances
 plot_bar(psTemp, "X.SampleID", fill="Phylum")
+
+# Rarefaction to an even depth
+ps.rarefied = rarefy_even_depth(psTemp)
+
+# Rarefied abundances
+plot_bar(ps.rarefied, "X.SampleID", fill="Phylum")
 ```
 
 
