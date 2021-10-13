@@ -64,6 +64,7 @@ $ cd data
 $ head Platz1_R1.head.fastq
 
 # count the total number of lines with the command below -how many READS are in this FASTQ?
+# hint: each read in FASTQ format consists of four lines
 $ wc -l Platz1_R1.head.fastq
 
 # find specific words, e.g "AATATT"
@@ -101,8 +102,13 @@ $ pandaseq -f Platz1_R1.head.fastq -r Platz1_R2.head.fastq -w Platz1.fa -g log.t
 # observe the first ten lines of the FASTA output
 $ head Platz1.fa
 
-# count the total number of HEADER lines with the command below -how many FRAGMENTS are in this FASTA?
+# how many sequences are in this FASTA?
+# hint: count the total number of HEADER line symbols (">") with any of the commands below 
+$ grep ">" Platz1.fa | wc -l
 $ grep -c ">" Platz1.fa
+
+# Q: what is the rate of FASTA sequences vs FASTQ reads?
+# and what does this tell us about our sequencing and assembly quality and efficiency?
 ```
 
 ##### 2.3 OTU Assignment: Align sequence data to rRNA databases
