@@ -133,10 +133,10 @@ library(ggplot2, quietly = TRUE)
 library(phyloseq, quietly = TRUE)
 
 # OTU data
-InputBiomFile <- "mikrobiome2020.biom"
+InputBiomFile <- "~/data/mbtmicrobiome2021.biom"
 
-# Samples' data
-InputMapFile <- "metadata2020.tsv"
+# Samples' metadata
+InputMapFile <- "~/data/sample-metadata-2021.tsv"
 
 # prepare phyloseq object by loading both files
 BiomData <- import_biom(InputBiomFile, parseFunction = parse_taxonomy_greengenes)
@@ -160,11 +160,13 @@ iDist <- distance(psTemp, method="bray")
 iMDS  <- ordinate(psTemp, distance=iDist)
 
 # plot sample ordination
-plot_ordination(psTemp, iMDS, color="Gender")
+plot_ordination(psTemp, iMDS, color="Geschlecht")
 
 # plot sample ordination, including labels
-plot_ordination(psTemp, iMDS, color="Gender") + 
-  geom_text(aes(label=X.SampleID), hjust=0, vjust=0) 
+plot_ordination(psTemp, iMDS, color="Geschlecht") + 
+  geom_text(aes(label=X.SampleID), hjust=0, vjust=0)
+  
+# repeat the ordination plot, using diet and smoking habits information
 ```
 
 ##### 3.3 Microbial communities
