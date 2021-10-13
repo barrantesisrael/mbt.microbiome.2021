@@ -150,6 +150,13 @@ psTemp <- ExperimentPhyloseqObject
 
 # checking the features of our microbiome data
 psTemp
+
+# subset samples
+# Prune OTUs with low abundances from all samples 
+psTemp <- prune_taxa(taxa_sums(psTemp) > 100, psTemp)
+
+# Prune samples with no metadata
+psTemp <-  subset_samples(psTemp, Geschlecht != "ND") 
 ```
 
 ##### 3.2 Sample ordination
@@ -180,6 +187,14 @@ ps.rarefied = rarefy_even_depth(psTemp)
 
 # Rarefied abundances
 plot_bar(ps.rarefied, "X.SampleID", fill="Phylum")
+
+# Remove lines
+ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
+plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum")
+
+# Separate according to metadata
+plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Geschlecht")
+plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Geschlecht~Raucher")
 ```
 
 
