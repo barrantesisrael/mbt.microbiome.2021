@@ -36,7 +36,7 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ##### Presentations
 
-- Slides: [`MBTPraktikum.2021.V02.pdf`](https://drive.google.com/file/d/1nMJfC1jkrDPpkhX_12Rqsh-TYHmGWrFV/view?usp=sharing)
+- Slides: [`MBTPraktikum.2021.V02.pdf`](https://drive.google.com/file/d/1llSavTsSPvWGhzqsqVciQ8zzlLMfkPm_/view?usp=sharing)
 
 ##### Software
 
