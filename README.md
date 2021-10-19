@@ -34,9 +34,9 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ## Session 1
 
-##### Data
+##### Presentations
 
-- Illumina data: [cloud drive](https://drive.google.com/drive/folders/16M2Gn7gn_3vORVX6uAy4k9LdNNsL7KO_); see `fastq` folder
+- Slides: [`MBTPraktikum.2021.V02.pdf`](https://drive.google.com/file/d/1nMJfC1jkrDPpkhX_12Rqsh-TYHmGWrFV/view?usp=sharing)
 
 ##### Software
 
