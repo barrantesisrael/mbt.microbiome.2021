@@ -188,11 +188,10 @@ plot_bar(psTemp, "X.SampleID", fill="Phylum")
 # Rarefaction to an even depth
 ps.rarefied = rarefy_even_depth(psTemp)
 
-# Rarefied abundances
-plot_bar(ps.rarefied, "X.SampleID", fill="Phylum")
-
 # Remove lines
 ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
+
+# Plot abundances
 plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum")
 
 # Separate according to metadata
