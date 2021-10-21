@@ -186,7 +186,7 @@ plot_ordination(psTemp, iMDS, color="Raucher") +
 plot_bar(psTemp, "X.SampleID", fill="Phylum")
 
 # Rarefaction to an even depth
-ps.rarefied = rarefy_even_depth(psTemp)
+ps.rarefied <- rarefy_even_depth(psTemp)
 
 # Remove lines
 ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
@@ -198,16 +198,16 @@ plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum")
 plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Geschlecht")
 plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Geschlecht~Raucher")
 
-### Merge samples by a category
+### Merge samples by a category, e.g. "Raucher"
 mergedGP <- merge_samples(psTemp, "Raucher")
 
 # Rarefaction to an even depth
-ps.rarefied = rarefy_even_depth(mergedGP)
+ps.rarefied <- rarefy_even_depth(mergedGP)
 
 # Remove lines
 ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
 
-# Plot abundances
+# Plot abundances for the example category "Raucher"
 plot_bar(ps.rarefied.glom, fill="Phylum")
 ```
 
