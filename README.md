@@ -30,6 +30,15 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 - Sessions 1-2, Data analysis: [IBIMA](https://ibima.med.uni-rostock.de) Computerraum ([Ernst-Heydemann-Str. 8](https://goo.gl/maps/JGDWhPDLHxG2), 3. Etage, Nr. 3016); 12.10 and 19.10.2022, 10:00 - 11:30 hrs.
 
+##### Presentations
+
+- Slides: [`MBTPraktikum.2021.V02.pdf`](https://drive.google.com/file/d/1llSavTsSPvWGhzqsqVciQ8zzlLMfkPm_/view?usp=sharing)
+
+##### Software
+
+- Our interactive course uses the virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio) system
+
+
 <!--
 
 ## Materials and online methods
@@ -40,11 +49,12 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 * [Galaxy](https://usegalaxy.eu) european project mirror (US version [here](https://usegalaxy.org))
 * [RDP Classifier webserver](http://rdp.cme.msu.edu/classifier/classifier.jsp)
--->
+
 
 ---
 
 ## Session 1
+
 
 ##### Presentations
 
@@ -54,17 +64,22 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 - Our interactive course uses the virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio) system
 
-<!--
 Alternatively: https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio
--->
+
 
 ---
 
 ## Session 2 
 
+-->
+
+---
+
+## Session 1
+
 Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio)
 
-##### 2.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
+##### 1.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
 
 ```bash
