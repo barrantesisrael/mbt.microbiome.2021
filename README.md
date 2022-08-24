@@ -1,9 +1,3 @@
-<!--
-
-# UMR MBT Microbiome Praktikum WS2021/22
-
--->
-
 # UMR MBT Microbiome Praktikum
 
 Scripts and tutorials for analyzing microbiome data. Lab practice for the lecture: <br>[Moderne molekulare und Hochdurchsatz-Technologien in der medizinischen Grundlagenforschung](https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&navigationPosition=lectures%2Csearch&breadcrumb=searchLectures&topitem=lectures&subitem=search&veranstaltung.veranstid=132915)
@@ -28,7 +22,7 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 -->
 
-- Sessions 1-2, Data analysis: [IBIMA](https://ibima.med.uni-rostock.de) Computerraum ([Ernst-Heydemann-Str. 8](https://goo.gl/maps/JGDWhPDLHxG2), 3. Etage, Nr. 3016); 12.10 and 19.10.2022, 10:00 - 11:30 hrs.
+- Sessions 1-2: [IBIMA](https://ibima.med.uni-rostock.de) Computerraum ([Ernst-Heydemann-Str. 8](https://goo.gl/maps/JGDWhPDLHxG2), 3. Etage, Nr. 3016); 12.10 and 19.10.2022, 10:00 - 11:30 hrs.
 
 ##### Presentations
 
@@ -36,42 +30,9 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ##### Software
 
-- Our interactive course uses the virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio) system
+- All installed software, packages and data are accessible through our the virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio) environment
 
 
-<!--
-
-## Materials and online methods
-
-- Alternatively, the course can be also followed using the [MiSeq SOP](http://www.mothur.org/w/images/d/d6/MiSeqSOPData.zip) FASTQ files (Kosich et al., 2013).
-
-##### Online tools
-
-* [Galaxy](https://usegalaxy.eu) european project mirror (US version [here](https://usegalaxy.org))
-* [RDP Classifier webserver](http://rdp.cme.msu.edu/classifier/classifier.jsp)
-
-
----
-
-## Session 1
-
-
-##### Presentations
-
-- Slides: [`MBTPraktikum.2021.V02.pdf`](https://drive.google.com/file/d/1llSavTsSPvWGhzqsqVciQ8zzlLMfkPm_/view?usp=sharing)
-
-##### Software
-
-- Our interactive course uses the virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio) system
-
-Alternatively: https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio
-
-
----
-
-## Session 2 
-
--->
 
 ---
 
@@ -108,14 +69,7 @@ $ fastqc --quiet Platz1_R1.head.fastq
 ```
 
 
-##### Alternative: Quality control with the FASTQC tool at the Galaxy server
-
-- Head to the [Galaxy](https://usegalaxy.eu) project mirror
-- Upload your sequencing FASTQ data
-- Find the `FASTQC` program on the tool frame, and run this program with your data.
-
-
-##### 2.2 Amplicon assembly with [pandaseq](https://github.com/neufeld/pandaseq) (example)
+##### 1.2 Amplicon assembly with [pandaseq](https://github.com/neufeld/pandaseq)
 
 Continue on the `Terminal` from the Binder session
 
@@ -138,7 +92,7 @@ $ grep -c ">" Platz1.fa
 # and what does this tell us about our sequencing and assembly quality and efficiency?
 ```
 
-##### 2.3 OTU Assignment: Align sequence data to rRNA databases
+##### 1.3 OTU Assignment: Align sequence data to rRNA databases
 
 - Copy first 10 lines from the above obtained FASTA (e.g. `Platz1.fa`)
 - Access the [RDP Classifier webserver](http://rdp.cme.msu.edu/classifier/classifier.jsp) 
@@ -148,9 +102,9 @@ $ grep -c ">" Platz1.fa
 
 ---
 
-## Session 3
+## Session 2
 
-##### 3.1 Loading libraries and microbiome data 
+##### 2.1 Loading libraries and microbiome data 
 
 ```r
 # load ggplot2 library (graphics)
@@ -186,7 +140,7 @@ psTemp <- prune_taxa(taxa_sums(psTemp) > 100, psTemp)
 psTemp <-  subset_samples(psTemp, Geschlecht != "ND") 
 ```
 
-##### 3.2 Sample ordination
+##### 2.2 Sample ordination
 
 ```r
 # Calculate distance and ordination
@@ -206,7 +160,7 @@ plot_ordination(psTemp, iMDS, color="Raucher") +
   stat_ellipse() # using default ellipse
 ```
 
-##### 3.3 Microbial communities
+##### 2.3 Microbial communities
 
 ```r
 # Plot abundances
@@ -269,6 +223,6 @@ Ernst-Heydemann-Str. 8<br>
 Email: israel.barrantes[bei]uni-rostock.de
 
 ---
-Last update 2021/09/08
+Last update 2022/08/24
 
 
