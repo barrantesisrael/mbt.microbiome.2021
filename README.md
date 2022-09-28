@@ -46,7 +46,7 @@ Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.s
 ```bash
 # try basic Linux/OSX commands, such as
 $ ls
-$ cd data
+$ cd data2022
 
 # observe the first ten lines -what do you notice?
 $ head Platz1_R1.head.fastq
@@ -114,10 +114,10 @@ library(ggplot2, quietly = TRUE)
 library(phyloseq, quietly = TRUE)
 
 # OTU data
-InputBiomFile <- "~/data/mbtmicrobiome2021.biom"
+InputBiomFile <- "~/data2022/mbtmicrobiome2022.biom"
 
 # Samples' metadata
-InputMapFile <- "~/data/sample-metadata-2021.tsv"
+InputMapFile <- "~/data2022/sample-metadata-2022.tsv"
 
 # prepare phyloseq object by loading both files
 BiomData <- import_biom(InputBiomFile, parseFunction = parse_taxonomy_greengenes)
