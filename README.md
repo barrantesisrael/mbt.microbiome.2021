@@ -92,12 +92,24 @@ $ grep -c ">" Platz1.fa
 # and what does this tell us about our sequencing and assembly quality and efficiency?
 ```
 
-##### 1.3 OTU Assignment: Align sequence data to rRNA databases
+##### 1.3 OTU Assignment with [kraken2](https://ccb.jhu.edu/software/kraken2/) against the 16S [Greengenes](https://greengenes.secondgenome.com/) database
 
-- Copy first 10 lines from the above obtained FASTA (e.g. `Platz1.fa`)
-- Access the [RDP Classifier webserver](http://rdp.cme.msu.edu/classifier/classifier.jsp) 
-- Upload the FASTA header by clicking on `Browse`, next to "_Choose a file (unaligned format) to upload:_"; select the file and hit `Open`
-- Click on `Submit`. When the run is already complete, examine the results. These can be also downloaded by clicking on `download entire hierarchy as text file`.
+```bash
+# ~/data2022
+
+# Obtain the 16S Greengenes database formatted for kraken2
+$ wget https://genome-idx.s3.amazonaws.com/kraken/16S_Greengenes13.5_20200326.tgz
+
+# Decompress the data
+$ tar xzf 16S_Greengenes13.5_20200326.tgz 
+
+# Run your samples against Greengenes with your own data
+# the example here is the with the Platz10 run
+# replace the FASTQ filenames with your own FASTQ names
+$ kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report report.txt --paired Platz10_R1.head.fastq Platz10_R2.head.fastq
+
+# inspect your individual results within the RStudio window
+```
 
 
 ---
@@ -223,6 +235,6 @@ Ernst-Heydemann-Str. 8<br>
 Email: israel.barrantes[bei]uni-rostock.de
 
 ---
-Last update 2022/08/24
+Last update 2022/09/30
 
 
