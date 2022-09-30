@@ -94,6 +94,7 @@ $ grep -c ">" Platz1.fa
 
 ##### 1.3 OTU Assignment with [kraken2](https://ccb.jhu.edu/software/kraken2/) against the 16S [Greengenes](https://greengenes.secondgenome.com/) database
 
+
 ```bash
 # ~/data2022
 
