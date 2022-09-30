@@ -98,6 +98,7 @@ $ grep -c ">" Platz1.fa
 
 ```bash
 # Current path: ~/data2022
+# Run this step together with your neighbor/colleague to avoid saturation of the storage server
 # Obtain the 16S Greengenes database formatted for kraken2
 $ wget https://genome-idx.s3.amazonaws.com/kraken/16S_Greengenes13.5_20200326.tgz
 
