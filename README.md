@@ -74,6 +74,7 @@ $ fastqc --quiet Platz1_R1.head.fastq
 Continue on the `Terminal` from the Binder session
 
 ```bash
+# Current path: ~/data2022
 # pandaseq options
 $ pandaseq -h
 
@@ -96,8 +97,7 @@ $ grep -c ">" Platz1.fa
 
 
 ```bash
-# ~/data2022
-
+# Current path: ~/data2022
 # Obtain the 16S Greengenes database formatted for kraken2
 $ wget https://genome-idx.s3.amazonaws.com/kraken/16S_Greengenes13.5_20200326.tgz
 
@@ -110,6 +110,7 @@ $ tar xzf 16S_Greengenes13.5_20200326.tgz
 $ kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report report.txt --paired Platz10_R1.head.fastq Platz10_R2.head.fastq
 
 # inspect your individual results within the RStudio window
+# Q: What are the most predominant genera in your personal Illumina runs?
 ```
 
 
