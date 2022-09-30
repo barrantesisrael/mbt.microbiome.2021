@@ -115,6 +115,7 @@ $ kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report repo
 # Q: What are the most predominant genera in your personal Illumina runs?
 ```
 
+The whole OTU table can be visually inspected here: [`mbtmicrobiome2022.tsv`](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2022/mbtmicrobiome2022.tsv)
 
 ---
 
