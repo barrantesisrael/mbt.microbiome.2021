@@ -10,6 +10,7 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 * Evaluate the quality of an Illumina sequencing run, including data filtering;
 * Carry out assemblies of 16S rRNA amplicons;
+* Assign Illumina runs to OTUs from 16S rRNA databases;
 * Learn the basics on the R programming language and environment; and 
 * State how to manipulate microbiome data including count tables and sample metadata. 
 
