@@ -99,19 +99,14 @@ $ grep -c ">" Platz1.fa
 
 ```bash
 # Current path: ~/data2022
-# Run this step together with your neighbor/colleague to avoid saturation of the storage server
-# Obtain the 16S Greengenes database formatted for kraken2
-$ wget https://genome-idx.s3.amazonaws.com/kraken/16S_Greengenes13.5_20200326.tgz
-
-# Decompress the data
-$ tar xzf 16S_Greengenes13.5_20200326.tgz 
+# Note: Run this step together with your neighbor/colleague to avoid saturation of the storage server
 
 # Run your samples against Greengenes with your own data
 # the example here is the with the Platz10 run
 # replace the FASTQ filenames with your own FASTQ names
 $ kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report report.txt --paired Platz10_R1.head.fastq Platz10_R2.head.fastq
 
-# inspect your individual results within the RStudio window
+# inspect your individual results (file: report.txt) within the RStudio window
 # Q: What are the most predominant genera in your personal Illumina runs?
 ```
 
