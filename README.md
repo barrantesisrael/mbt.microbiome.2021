@@ -23,7 +23,8 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 -->
 
-- Sessions 1-2: [IBIMA](https://ibima.med.uni-rostock.de) Computerraum ([Ernst-Heydemann-Str. 8](https://goo.gl/maps/JGDWhPDLHxG2), 3. Etage, Nr. 3016); 12.10 and 19.10.2022, 10:00 - 11:30 hrs.
+- Session 1 (12.10.2022): HS UKJ; 10:00 - 11:30 hrs. 
+- Session 2 (19.10.2022): [IBIMA](https://ibima.med.uni-rostock.de) Computerraum ([Ernst-Heydemann-Str. 8](https://goo.gl/maps/JGDWhPDLHxG2), 3. Etage, Nr. 3016); 10:00 - 11:30 hrs.
 
 ##### Presentations
 
