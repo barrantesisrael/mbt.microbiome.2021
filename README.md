@@ -175,7 +175,7 @@ psTemp <-  subset_samples(psTemp, Geschlecht != "ND")
 
 ##### 2.2 Sample ordination
 
-Continue on the Rscript pane from the Binder session.
+Continue on the Rscript pane from the Binder session. Note: Plots can be easily visualized by clicking on _Zoom_
 
 ```r
 # Calculate distance and ordination
