@@ -111,6 +111,18 @@ $ kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report repo
 # Q: What are the most predominant genera in your personal Illumina runs?
 ```
 
+The output report from Kraken2 consists of the following fields:
+
+- Percentage of fragments covered by the clade rooted at this taxon
+- Number of fragments covered by the clade rooted at this taxon
+- Number of fragments assigned directly to this taxon
+- A rank code, indicating (U)nclassified, (R)oot, (D)omain, (K)ingdom, (P)hylum, (C)lass, (O)rder, (F)amily, (G)enus, or (S)pecies. 
+- NCBI taxonomic ID number
+- Indented scientific name
+
+See the program [documentation](https://github.com/DerrickWood/kraken2/blob/master/docs/MANUAL.markdown#sample-report-output-format) for details.
+
+
 ##### For Session 2:
 
 - Aside of the regular attendance list, prepare a table with the following data: Platz-number, Gender (F/M), smoking (yes/no), pets (yes/no). We will visualize if these common confounders have a relationship with the microbiome data.
