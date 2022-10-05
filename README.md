@@ -171,6 +171,8 @@ psTemp <- prune_taxa(taxa_sums(psTemp) > 100, psTemp)
 
 # Prune samples with no metadata
 psTemp <-  subset_samples(psTemp, Geschlecht != "ND") 
+
+# Q: What are the differences between the "ExperimentPhyloseqObject" and "psTemp" objects?
 ```
 
 ##### 2.2 Sample ordination
@@ -183,16 +185,18 @@ iDist <- distance(psTemp, method="bray")
 iMDS  <- ordinate(psTemp, distance=iDist)
 
 # plot sample ordination
-plot_ordination(psTemp, iMDS, color="Geschlecht")
+plot_ordination(psTemp, iMDS, color="Gender")
+# Q: Are there any clear separations between the gender groups? Why/Why not?
 
 # plot sample ordination, including labels
-plot_ordination(psTemp, iMDS, color="Geschlecht") + 
+plot_ordination(psTemp, iMDS, color="Gender") + 
   geom_text(aes(label=X.SampleID), hjust=0, vjust=0)
   
 # repeat the ordination plot, using diet and smoking habits information
-plot_ordination(psTemp, iMDS, color="Raucher") + 
+plot_ordination(psTemp, iMDS, color="Smoking") + 
   geom_text(aes(label=X.SampleID), vjust = -1) +
   stat_ellipse() # using default ellipse
+# Q: Are there any clear separations between the plotted groups? Why/Why not?
 ```
 
 ##### 2.3 Microbial communities
@@ -211,13 +215,14 @@ ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
 
 # Plot abundances
 plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum")
+# Q: What are the differences between the abundance plots before and after rarefaction?
 
 # Separate according to metadata
-plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Geschlecht")
-plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Geschlecht~Raucher")
+plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Gender")
+plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Gender~Smoking")
 
-### Merge samples by a category, e.g. "Raucher"
-mergedGP <- merge_samples(psTemp, "Raucher")
+### Merge samples by a category, e.g. "Smoking"
+mergedGP <- merge_samples(psTemp, "Smoking")
 
 # Rarefaction to an even depth
 ps.rarefied <- rarefy_even_depth(mergedGP)
@@ -225,7 +230,7 @@ ps.rarefied <- rarefy_even_depth(mergedGP)
 # Remove lines
 ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
 
-# Plot abundances for the example category "Raucher"
+# Plot abundances for the example category "Smoking"
 plot_bar(ps.rarefied.glom, fill="Phylum")
 ```
 
