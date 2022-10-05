@@ -44,6 +44,7 @@ Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.s
 
 ##### 1.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
+Use the `Terminal` tab from the Binder session.
 
 ```bash
 # try basic Linux/OSX commands, such as
@@ -73,7 +74,7 @@ $ fastqc --quiet Platz1_R1.head.fastq
 
 ##### 1.2 Amplicon assembly with [pandaseq](https://github.com/neufeld/pandaseq)
 
-Continue on the `Terminal` from the Binder session
+Continue on the `Terminal` from the Binder session.
 
 ```bash
 # Current path: ~/data2022
@@ -97,6 +98,7 @@ $ grep -c ">" Platz1.fa
 
 ##### 1.3 OTU Assignment with [kraken2](https://ccb.jhu.edu/software/kraken2/) against the 16S [Greengenes](https://greengenes.secondgenome.com/) database
 
+Continue on the `Terminal` from the Binder session.
 
 ```bash
 # Current path: ~/data2022
@@ -135,6 +137,8 @@ See the program [documentation](https://github.com/DerrickWood/kraken2/blob/mast
 
 ##### 2.1 Loading libraries and microbiome data 
 
+Open a new Rscript in the Binder session: Menu _File / New File / Rscript_
+
 ```r
 # load ggplot2 library (graphics)
 library(ggplot2, quietly = TRUE)
@@ -171,6 +175,8 @@ psTemp <-  subset_samples(psTemp, Geschlecht != "ND")
 
 ##### 2.2 Sample ordination
 
+Continue on the Rscript pane from the Binder session.
+
 ```r
 # Calculate distance and ordination
 iDist <- distance(psTemp, method="bray")
@@ -190,6 +196,8 @@ plot_ordination(psTemp, iMDS, color="Raucher") +
 ```
 
 ##### 2.3 Microbial communities
+
+Continue on the Rscript pane from the Binder session.
 
 ```r
 # Plot abundances
