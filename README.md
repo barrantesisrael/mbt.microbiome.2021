@@ -1,6 +1,6 @@
 # UMR MBT Microbiome Praktikum
 
-Scripts and tutorials for analyzing microbiome data. Lab practice for the lecture: <br>[Moderne molekulare und Hochdurchsatz-Technologien in der medizinischen Grundlagenforschung](https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&navigationPosition=lectures%2Csearch&breadcrumb=searchLectures&topitem=lectures&subitem=search&veranstaltung.veranstid=132915)
+Scripts and tutorials for analyzing microbiome data. Lab practice for the lecture: <br>[Moderne molekulare und Hochdurchsatz-Technologien in der medizinischen Grundlagenforschung](https://lsf.uni-rostock.de/qisserver/rds?state=verpublish&status=init&vmfile=no&publishid=144145&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung)
 
 ---
 
