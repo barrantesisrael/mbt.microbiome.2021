@@ -16,6 +16,9 @@ grep "AATATT" Platz10_R1.head.fastq
 # combine commands. e.g.
 grep "AATATT" Platz10_R1.head.fastq | wc -l
 
+# this grep command gives the same output
+grep -c "AATATT" Platz10_R1.head.fastq 
+
 # quality check with fastqc
 fastqc --quiet Platz1_R1.head.fastq
 # click to HTML output and select "View in Web Browser"
@@ -35,7 +38,6 @@ head Platz10.fa
 
 # how many sequences are in this FASTA?
 # hint: count the total number of HEADER line symbols (">") with any of the commands below 
-grep ">" Platz10.fa | wc -l
 grep -c ">" Platz10.fa
 
 # Q: what is the rate of FASTA sequences vs FASTQ reads?
@@ -43,16 +45,14 @@ grep -c ">" Platz10.fa
 
 ### 1.3 OTU Assignment with kraken2 against the 16S Greengenes database ###
 
-# Current path: ~/data2022
-# Note: Run this step together with your neighbor/colleague to avoid saturation of the storage server
-
 # Run your samples against Greengenes with your own data
 # the example here is the with the Platz10 run
-kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report report.txt Platz10.fa
+kraken2 --db 16S_Greengenes_k2db --use-names --output output1.txt --report report1.txt Platz10.fa
 
 # kraken can also run directly with FASTQ files
 # replace the FASTQ filenames with your own FASTQ names
-kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report report.txt --paired Platz10_R1.head.fastq Platz10_R2.head.fastq
+kraken2 --db 16S_Greengenes_k2db --use-names --output output2.txt --report report2.txt --paired Platz10_R1.head.fastq Platz10_R2.head.fastq
 
 # inspect your individual results (file: report.txt) within the RStudio window
-# Q: What are the most predominant genera in your personal Illumina runs?
+# Q1: What are the most predominant genera in your personal Illumina runs?
+# Q2: Are there differences between the runs with the FASTA and FASTQ files (report1.txt and report2.txt)? Why/why not?
