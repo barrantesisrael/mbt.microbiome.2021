@@ -190,10 +190,10 @@ plot_ordination(psTemp, iMDS, color="Gender")
 
 # plot sample ordination, including labels
 plot_ordination(psTemp, iMDS, color="Gender") + 
-  geom_text(aes(label=X.SampleID), hjust=0, vjust=0)
+  geom_text(aes(label=X.SampleID), vjust = -1)
   
-# repeat the ordination plot, using diet and smoking habits information
-plot_ordination(psTemp, iMDS, color="Smoking") + 
+# repeat the ordination plot using other metadata information (e.g. pets)
+plot_ordination(psTemp, iMDS, color="Pets") + 
   geom_text(aes(label=X.SampleID), vjust = -1) +
   stat_ellipse() # using default ellipse
 # Q: Are there any clear separations between the plotted groups? Why/Why not?
