@@ -61,7 +61,7 @@ plot_ordination(psTemp, iMDS, color="Pets") +
 
 ##### 2.3 Microbial communities #####
 
-# Plot abundances
+### Abundances per sample
 plot_bar(psTemp, "X.SampleID", fill="Phylum")
 
 # Rarefaction to an even depth
@@ -74,11 +74,8 @@ ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
 plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum")
 # Q: What are the differences between the abundance plots before and after rarefaction?
 
-# Separate according to metadata
-plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Gender")
-plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum", facet_grid="Gender~Smoking")
-
-### Merge samples by a category, e.g. "Gender"
+### Abundances per category, e.g. "Gender"
+# Merge samples by the selected category
 mergedGP <- merge_samples(psTemp, "Gender")
 
 # Rarefaction to an even depth
@@ -99,8 +96,11 @@ plot_richness(psTemp, x = "X.SampleID", measures = c("Shannon"))
 # Repeat the same analyses at the Gender level
 plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon")) 
 
-# Improving our plot by adding proper labels
+# Assign our plot to a variable
 Our_Richness_plot <- plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon")) 
+Our_Richness_plot
+
+# Improving our plot e.g. by adding proper labels
 Our_Richness_plot + geom_boxplot(data = Our_Richness_plot$data, aes(x = Gender, y = value, color = Gender), alpha = 0.1) + # boxplot
   labs(title = "Richness (Shannon alpha diversity)", subtitle = "MBT Class WS2022/23") + # title and subtitle
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5)) # x-axis labels: 0 degree rotation, 0.5 horizontal position
