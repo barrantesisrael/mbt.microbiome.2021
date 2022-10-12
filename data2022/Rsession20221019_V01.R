@@ -94,7 +94,7 @@ plot_bar(ps.rarefied.glom, fill="Phylum")
 ##### 2.4 Diversity #####
 
 # Observe the Shannon diversity on the individual samples
-plot_richness(psTemp, x = "Group", measures = c("Shannon")) 
+plot_richness(psTemp, x = "X.SampleID", measures = c("Shannon")) 
 
 # Repeat the same analyses at the Gender level
 plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon")) 
