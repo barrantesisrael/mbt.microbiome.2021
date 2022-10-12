@@ -170,7 +170,7 @@ psTemp
 psTemp <- prune_taxa(taxa_sums(psTemp) > 100, psTemp)
 
 # Prune samples with no metadata
-psTemp <-  subset_samples(psTemp, Geschlecht != "ND") 
+psTemp <-  subset_samples(psTemp, Gender != "NA") 
 
 # Q: What are the differences between the "ExperimentPhyloseqObject" and "psTemp" objects?
 ```
