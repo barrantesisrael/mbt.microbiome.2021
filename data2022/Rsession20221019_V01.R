@@ -99,3 +99,8 @@ plot_richness(psTemp, x = "X.SampleID", measures = c("Shannon"))
 # Repeat the same analyses at the Gender level
 plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon")) 
 
+# Improving our plot by adding proper labels
+Our_Richness_plot <- plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon")) 
+Our_Richness_plot + geom_boxplot(data = Our_Richness_plot$data, aes(x = Gender, y = value, color = Gender), alpha = 0.1) + # boxplot
+  labs(title = "Richness (Shannon alpha diversity)", subtitle = "MBT Class WS2022/23") + # title and subtitle
+  theme(axis.text.x = element_text(angle = 0, hjust = 0.5)) # x-axis labels: 0 degree rotation, 0.5 horizontal position
