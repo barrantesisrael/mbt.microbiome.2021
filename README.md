@@ -23,8 +23,12 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 -->
 
+<!--
 - Session 1 (12.10.2022): HS UKJ; 10:00 - 11:30 hrs. 
 - Session 2 (19.10.2022): **SR2 ZIM**; 10:00 - 11:30 hrs.
+-->
+
+* Wednesday October 18th and 25th 2023 (10:00 - 11:30), at the SR2 - ZIM (Zentrum für Innere Medizin, Ernst-Heydemann-Str. 6)
 
 ##### Presentations
 
@@ -44,7 +48,7 @@ Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.s
 
 ##### 1.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
-Use the `Terminal` tab from the Binder session.
+Use the `Terminal` tab from the Binder session, anc copy/paste the commands below. Alternatively, open the following script: [bash_session_20231018_V01.sh](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2023/bash_session_20231018_V01.sh) within RStudio (Menu _File / Open File..._)
 
 ```bash
 # try basic Linux/OSX commands, such as
@@ -127,8 +131,8 @@ See the program [documentation](https://github.com/DerrickWood/kraken2/blob/mast
 
 ##### For Session 2:
 
-- Aside of the regular attendance list, prepare a table with the following data: Platz-number, Gender (F/M), smoking (yes/no), pets (yes/no). We will visualize if these common confounders have a relationship with the microbiome data.
-- The whole OTU table can be visually inspected here: [`mbtmicrobiome2022.tsv`](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2022/mbtmicrobiome2022.tsv)
+- Aside of the regular attendance list, prepare a table with the following data: Platz-number, Gender (F/M), smoking (yes/no), vegetarian/vegan diet (yes/no), pets (yes/no). We will visualize if these common confounders have a relationship with the microbiome data.
+- The whole OTU table can be visually inspected here: [`mbtmicrobiome2023.tsv`](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2023/mbtmicrobiome2023.tsv)
 
 
 ---
@@ -137,7 +141,7 @@ See the program [documentation](https://github.com/DerrickWood/kraken2/blob/mast
 
 ##### 2.1 Loading libraries and microbiome data 
 
-Open a new Rscript in the Binder session: Menu _File / New File / Rscript_
+Open a new Rscript in the Binder session: Menu _File / New File / Rscript_; else simply open the following script: [r_session_20231025_V01.R](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2023/r_session_20231025_V01.R) within RStudio
 
 ```r
 # load ggplot2 library (graphics)
@@ -147,10 +151,10 @@ library(ggplot2, quietly = TRUE)
 library(phyloseq, quietly = TRUE)
 
 # OTU data
-InputBiomFile <- "~/data2022/mbtmicrobiome2022.biom"
+InputBiomFile <- "~/data2022/mbtmicrobiome2023.biom"
 
 # Samples' metadata
-InputMapFile <- "~/data2022/sample-metadata-2022.tsv"
+InputMapFile <- "~/data2022/sample-metadata-2023.tsv"
 
 # prepare phyloseq object by loading both files
 BiomData <- import_biom(InputBiomFile, parseFunction = parse_taxonomy_greengenes)
