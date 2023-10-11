@@ -48,7 +48,7 @@ Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.s
 
 ##### 1.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
-Use the `Terminal` tab from the Binder session, anc copy/paste the commands below. Alternatively, open the following script: [bash_session_20231018_V01.sh](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2023/bash_session_20231018_V01.sh) within RStudio (Menu _File / Open File..._)
+Use the `Terminal` tab from the Binder session, and copy/paste the commands below as indicated during the seminar. Alternatively, open the following script: [bash_session_20231018_V01.sh](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2023/bash_session_20231018_V01.sh) within RStudio (Menu _File / Open File..._)
 
 ```bash
 # try basic Linux/OSX commands, such as
