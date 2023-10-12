@@ -44,16 +44,35 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ## Session 1
 
+
+<!--
+
+### 2023-10-12 binder wasn't loading when calling for RStudio
 Launch our interactive course here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio)
+
+-->
+
+
+Open first this page again in a new browser tab, and then launch our interactive course: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main)
+
 
 ##### 1.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
+Open a Terminal session by clicking to the Terminal icon below _Other_. Then copy/paste the commands below as indicated during the seminar. 
+
+<!--
+
+### 2023-10-12 binder wasn't loading when calling for RStudio
 Use the `Terminal` tab from the Binder session, and copy/paste the commands below as indicated during the seminar. Alternatively, open the following script: [bash_session_20231018_V01.sh](https://github.com/barrantesisrael/mbt.microbiome.2021/blob/main/data2023/bash_session_20231018_V01.sh) within RStudio (Menu _File / Open File..._)
+
+-->
+
+
 
 ```bash
 # try basic Linux/OSX commands, such as
 $ ls
-$ cd data2022
+$ cd data2023
 
 # observe the first ten lines -what do you notice?
 $ head Platz1_R1.head.fastq
@@ -270,6 +289,6 @@ Ernst-Heydemann-Str. 8<br>
 Email: israel.barrantes[bei]uni-rostock.de
 
 ---
-Last update 2022/10/14
+Last update 2023/10/12
 
 
