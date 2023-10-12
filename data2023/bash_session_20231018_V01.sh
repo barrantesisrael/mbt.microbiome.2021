@@ -1,7 +1,7 @@
 ### 1.1 Introduction to the command line for Bioinformatics and Quality control with the FASTQC tool ###
 # try basic Linux/OSX commands, such as
 ls
-cd data2022
+cd data2023
 
 # observe the first ten lines -what do you notice?
 head Platz10_R1.head.fastq
