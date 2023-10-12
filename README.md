@@ -89,7 +89,7 @@ $ grep "AATATT" Platz1_R1.head.fastq | wc -l
 
 # quality check with fastqc
 $ fastqc --quiet Platz1_R1.head.fastq
-# click to HTML output and select "View in Web Browser"
+# find to HTML output in the file list and double click to open (or select "View in Web Browser" if inside RStudio)
 # a new tab opens with the fastqc results
 # repeat the analyses with the second sequencing pair, e.g. Platz1_R2.head.fastq
 ```
@@ -100,7 +100,7 @@ $ fastqc --quiet Platz1_R1.head.fastq
 Continue on the `Terminal` from the Binder session.
 
 ```bash
-# Current path: ~/data2022
+# Current path: ~/data2023
 # pandaseq options
 $ pandaseq -h
 
@@ -124,15 +124,18 @@ $ grep -c ">" Platz1.fa
 Continue on the `Terminal` from the Binder session.
 
 ```bash
-# Current path: ~/data2022
+# Current path: ~/data2023
 # Note: Run this step together with your neighbor/colleague to avoid saturation of the storage server
+
+# First download the Greengenes database by executing the following command
+$ bash getgg.sh 
 
 # Run your samples against Greengenes with your own data
 # the example here is the with the Platz10 run
 # replace the FASTQ filenames with your own FASTQ names
 $ kraken2 --db 16S_Greengenes_k2db --use-names --output output.txt --report report.txt --paired Platz10_R1.head.fastq Platz10_R2.head.fastq
 
-# inspect your individual results (file: report.txt) within the RStudio window
+# inspect your individual results (file: report.txt) by double-click in the file list (or within the RStudio window, if working with RStudio)
 # Q: What are the most predominant genera in your personal Illumina runs?
 ```
 
