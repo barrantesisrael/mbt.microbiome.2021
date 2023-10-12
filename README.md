@@ -58,7 +58,7 @@ Open first this page again in a new browser tab, and then launch our interactive
 
 ##### 1.1 Introduction to the command line for Bioinformatics and Quality control with the [FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) tool
 
-Open a Terminal session by clicking to the Terminal icon below _Other_. Then copy/paste the commands below as indicated during the seminar. 
+Open a Terminal session by clicking to the Terminal icon below _Other_. Then copy/paste the commands below as indicated during the seminar **without the "$ " characters**. 
 
 <!--
 
