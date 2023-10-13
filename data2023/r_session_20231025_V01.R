@@ -7,10 +7,10 @@ library(ggplot2, quietly = TRUE)
 library(phyloseq, quietly = TRUE)
 
 # OTU data
-InputBiomFile <- "~/data2022/mbtmicrobiome2023.biom"
+InputBiomFile <- "~/data2023/mbtmicrobiome2023.biom"
 
 # Samples' metadata
-InputMapFile <- "~/data2022/sample-metadata-2023.tsv"
+InputMapFile <- "~/data2023/sample-metadata-2023.tsv"
 
 # prepare phyloseq object by loading both files
 BiomData <- import_biom(InputBiomFile, parseFunction = parse_taxonomy_greengenes)
