@@ -36,7 +36,7 @@ These sessions will cover the use of a variety of software tools needed for the 
 
 ##### Software
 
-- All required software, packages and data are accessible through our virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main?urlpath=rstudio) environment
+- All required software, packages and data are accessible through our virtual [Binder](https://mybinder.org/v2/gh/barrantesisrael/mbt.microbiome.2021/main) environment
 
 
 
