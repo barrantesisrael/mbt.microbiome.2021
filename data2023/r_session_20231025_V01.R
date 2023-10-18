@@ -50,11 +50,11 @@ plot_ordination(psTemp, iMDS, color="Gender")
 
 # plot sample ordination, including labels
 plot_ordination(psTemp, iMDS, color="Gender") + 
-  geom_text(aes(label=X.SampleID), vjust = -1)
+  geom_text(aes(label=SampleID), vjust = -1)
 
 # repeat the ordination plot using other metadata information (e.g. pets)
 plot_ordination(psTemp, iMDS, color="Pets") + 
-  geom_text(aes(label=X.SampleID), vjust = -1) +
+  geom_text(aes(label=SampleID), vjust = -1) +
   stat_ellipse() # using default ellipse
 # Q: Are there any clear separations between the plotted groups? Why/Why not?
 
@@ -62,7 +62,7 @@ plot_ordination(psTemp, iMDS, color="Pets") +
 ##### 2.3 Microbial communities #####
 
 ### Abundances per sample
-plot_bar(psTemp, "X.SampleID", fill="Phylum")
+plot_bar(psTemp, "SampleID", fill="Phylum")
 
 # Rarefaction to an even depth
 ps.rarefied <- rarefy_even_depth(psTemp)
@@ -71,7 +71,7 @@ ps.rarefied <- rarefy_even_depth(psTemp)
 ps.rarefied.glom <- tax_glom(ps.rarefied, "Phylum")
 
 # Plot abundances
-plot_bar(ps.rarefied.glom, "X.SampleID", fill="Phylum")
+plot_bar(ps.rarefied.glom, "SampleID", fill="Phylum")
 # Q: What are the differences between the abundance plots before and after rarefaction?
 
 ### Abundances per category, e.g. "Gender"
@@ -91,7 +91,7 @@ plot_bar(ps.rarefied.glom, fill="Phylum")
 ##### 2.4 Diversity #####
 
 # Observe the Shannon diversity on the individual samples
-plot_richness(psTemp, x = "X.SampleID", measures = c("Shannon")) 
+plot_richness(psTemp, x = "SampleID", measures = c("Shannon")) 
 
 # Repeat the same analyses at the Gender level
 plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon")) 
@@ -102,5 +102,5 @@ Our_Richness_plot
 
 # Improving our plot e.g. by adding proper labels
 Our_Richness_plot + geom_boxplot(data = Our_Richness_plot$data, aes(x = Gender, y = value, color = Gender), alpha = 0.1) + # boxplot
-  labs(title = "Richness (Shannon alpha diversity)", subtitle = "MBT Class WS2022/23") + # title and subtitle
+  labs(title = "Richness (Shannon alpha diversity)", subtitle = "MBT Class WS2023") + # title and subtitle
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5)) # x-axis labels: 0 degree rotation, 0.5 horizontal position
