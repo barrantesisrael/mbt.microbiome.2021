@@ -44,18 +44,14 @@ psTemp
 iDist <- distance(psTemp, method="bray")
 iMDS  <- ordinate(psTemp, distance=iDist)
 
-# plot sample ordination
+# plot sample ordination, e.g. by Gender
 plot_ordination(psTemp, iMDS, color="Gender")
 # Q: Are there any clear separations between the gender groups? Why/Why not?
 
-# plot sample ordination, including labels
-plot_ordination(psTemp, iMDS, color="Gender") + 
+# repeat the ordination plot using other metadata information (e.g. cat yes/no)
+plot_ordination(psTemp, iMDS, color="Cat") + 
   geom_text(aes(label=SampleID), vjust = -1)
 
-# repeat the ordination plot using other metadata information (e.g. pets)
-plot_ordination(psTemp, iMDS, color="Pets") + 
-  geom_text(aes(label=SampleID), vjust = -1) +
-  stat_ellipse() # using default ellipse
 # Q: Are there any clear separations between the plotted groups? Why/Why not?
 
 
@@ -98,9 +94,8 @@ plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon"))
 
 # Assign our plot to a variable
 Our_Richness_plot <- plot_richness(psTemp, x = "Gender", color = "Gender", measures = c("Shannon")) 
-Our_Richness_plot
 
 # Improving our plot e.g. by adding proper labels
 Our_Richness_plot + geom_boxplot(data = Our_Richness_plot$data, aes(x = Gender, y = value, color = Gender), alpha = 0.1) + # boxplot
-  labs(title = "Richness (Shannon alpha diversity)", subtitle = "MBT Class WS2023") + # title and subtitle
+  labs(title = "Richness (Shannon alpha diversity)", subtitle = "MBT Class 2023") + # title and subtitle
   theme(axis.text.x = element_text(angle = 0, hjust = 0.5)) # x-axis labels: 0 degree rotation, 0.5 horizontal position
