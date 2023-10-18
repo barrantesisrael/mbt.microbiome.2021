@@ -1,10 +1,10 @@
 ##### 2.1 Loading libraries and microbiome data #####
 
 # load ggplot2 library (graphics)
-library(ggplot2, quietly = TRUE)
+library(ggplot2)
 
 # loading phyloseq library (microbiome analysis)
-library(phyloseq, quietly = TRUE)
+library(phyloseq)
 
 # OTU data
 InputBiomFile <- "~/data2023/mbtmicrobiome2023.biom"
